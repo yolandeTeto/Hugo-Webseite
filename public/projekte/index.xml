@@ -2,24 +2,24 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Projekte on </title>
-    <link>//localhost:52191/projekte/</link>
+    <link>//localhost:1313/projekte/</link>
     <description>Recent content in Projekte on </description>
     <generator>Hugo</generator>
     <language>en</language>
     <lastBuildDate>Fri, 27 Oct 2023 10:00:00 +0100</lastBuildDate>
-    <atom:link href="//localhost:52191/projekte/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="//localhost:1313/projekte/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Projekt Wetterdaten</title>
-      <link>//localhost:52191/projekte/wetterdaten/</link>
+      <link>//localhost:1313/projekte/wetterdaten/</link>
       <pubDate>Fri, 27 Oct 2023 10:00:00 +0100</pubDate>
-      <guid>//localhost:52191/projekte/wetterdaten/</guid>
+      <guid>//localhost:1313/projekte/wetterdaten/</guid>
       <description>&lt;p&gt;Detaillierte Informationen zum Projekt Wetterdaten.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Wetterdaten-Analyse</title>
-      <link>//localhost:52191/projekte/projekt1/</link>
+      <link>//localhost:1313/projekte/projekt1/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>//localhost:52191/projekte/projekt1/</guid>
+      <guid>//localhost:1313/projekte/projekt1/</guid>
       <description>&lt;h2 id=&#34;projektbeschreibung&#34;&gt;Projektbeschreibung&lt;/h2&gt;&#xA;&lt;p&gt;Innovative KI-Methoden zur Wettervorhersage&amp;hellip;&lt;/p&gt;</description>
     </item>
   </channel>
