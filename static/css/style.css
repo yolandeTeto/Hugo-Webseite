@@ -1,0 +1,19 @@
+/* Grundlayout */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #fff;
+  color: #333; /* statt #680a94 */
+}
+
+/* read-more Button */
+.read-more {
+  display: inline-block;
+  background: #003366;
+  color: white; /* statt lila */
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  border-radius: 4px;
+  margin-top: 1rem;
+}

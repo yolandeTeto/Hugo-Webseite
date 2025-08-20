@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ .Title }} - {{ .Site.Title }}</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Grundlegende Body-Stile */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f0f2f5; /* Sehr hellgrauer Hintergrund */
+            color: #2c3e50; /* Dunkelgraue Textfarbe */
+        }
+        /* Hauptfarbe Lila aus dem Mockup */
+        .main-color-bg {
+            background-color: #36196d;
+        }
+        .main-color-text {
+            color: #36196d;
+        }
+        /* Akzentfarbe Lila für Buttons und Links */
+        .accent-color-bg {
+            background-color: #7B52B3;
+        }
+        .accent-color-text {
+            color: #7B52B3;
+        }
+        /* Padding für Abschnitte */
+        .section-padding {
+            padding: 4rem 1rem;
+        }
+        @media (min-width: 768px) {
+            .section-padding {
+                padding: 6rem 4rem;
+            }
+        }
+        /* Button-Stil für alle Buttons */
+        .btn-primary {
+            background-color: #7B52B3; /* accent-color-bg */
+            color: white; /* text-white */
+            padding-left: 1.5rem; /* px-6 */
+            padding-right: 1.5rem; /* px-6 */
+            padding-top: 0.75rem; /* py-3 */
+            padding-bottom: 0.75rem; /* py-3 */
+            border-radius: 0.375rem; /* rounded-md */
+            font-weight: 600; /* font-semibold */
+            font-size: 1rem; /* text-base */
+            transition-property: background-color, transform; /* transition */
+            transition-duration: 300ms; /* duration-300 */
+            transition-timing-function: ease-in-out; /* ease-in-out */
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* shadow-md */
+        }
+        .btn-primary:hover {
+            background-color: #6a449e; /* Dunkleres Lila beim Hover */
+            transform: translateY(-2px); /* Leichter Hebeeffekt */
+            box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+        }
+        /* Stil für das Projekt-Label (nicht direkt auf Team-Seite verwendet, aber für Konsistenz) */
+        .project-label {
+            background-color: white; /* bg-white */
+            color: #36196d; /* text-[#36196d] */
+            padding-left: 1rem; /* px-4 */
+            padding-right: 1rem; /* px-4 */
+            padding-top: 0.5rem; /* py-2 */
+            padding-bottom: 0.5rem; /* py-2 */
+            border-radius: 0.375rem; /* rounded-md */
+            font-weight: 600; /* font-semibold */
+            font-size: 0.875rem; /* text-sm */
+            box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05); /* shadow-sm */
+            border-width: 1px; /* border */
+            border-color: #e5e7eb; /* border-gray-200 */
+            margin-bottom: 1rem; /* Abstand nach unten */
+        }
+    </style>
+</head>
+<body class="text-gray-800">
+
+    <!-- Header / Navigationsleiste -->
+    <header class="bg-white shadow-lg py-4 rounded-b-xl">
+        <nav class="container mx-auto flex flex-col md:flex-row items-center justify-between px-4">
+            <div class="text-3xl font-extrabold main-color-text mb-4 md:mb-0 p-2 rounded-md">KITE</div>
+            <ul class="flex flex-wrap justify-center md:justify-end space-x-4 md:space-x-8 text-lg">
+                {{ range .Site.Menus.main }}
+                    <li>
+                        <a href="{{ .URL }}" class="text-gray-700 hover:accent-color-text transition duration-300 ease-in-out font-semibold px-3 py-2 rounded-lg hover:bg-purple-50">
+                            {{ .Name }}
+                        </a>
+                    </li>
+                {{ end }}
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Team Sektion (Angepasst für die Team-Seite) -->
+    <section class="bg-[#ecf0f1] section-padding rounded-xl shadow-lg mx-4 md:mx-auto my-8 max-w-6xl">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="text-3xl md:text-4xl font-bold main-color-text mb-12 border-b-2 accent-color-text pb-2 inline-block">
+                {{ .Title }}
+            </h1>
+            <div class="prose lg:prose-lg mx-auto mt-4 text-left text-gray-700 mb-8">
+                {{ .Content }}
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Teammitglied 1 -->
+                <div class="bg-white rounded-xl shadow-lg p-6 flex flex-col items-center transform hover:scale-105 transition-transform duration-300 ease-in-out border border-[#d1c4e9]">
+                    <img src="https://placehold.co/120x120/E0D1F9/36196d?text=PM" alt="Prof. Max Mustermann" class="w-32 h-32 rounded-full mb-4 object-cover border-4 accent-color-bg shadow-md">
+                    <h3 class="text-xl font-semibold main-color-text">Prof. Max Mustermann</h3>
+                    <p class="accent-color-text text-sm">Leiter des Zentrums</p>
+                </div>
+                <!-- Teammitglied 2 -->
+                <div class="bg-white rounded-xl shadow-lg p-6 flex flex-col items-center transform hover:scale-105 transition-transform duration-300 ease-in-out border border-[#d1c4e9]">
+                    <img src="https://placehold.co/120x120/E0D1F9/36196d?text=PJ" alt="Prof. John Müller" class="w-32 h-32 rounded-full mb-4 object-cover border-4 accent-color-bg shadow-md">
+                    <h3 class="text-xl font-semibold main-color-text">Prof. John Müller</h3>
+                    <p class="accent-color-text text-sm">Forschung & Entwicklung</p>
+                </div>
+                <!-- Teammitglied 3 -->
+                <div class="bg-white rounded-xl shadow-lg p-6 flex flex-col items-center transform hover:scale-105 transition-transform duration-300 ease-in-out border border-[#d1c4e9]">
+                    <img src="https://placehold.co/120x120/E0D1F9/36196d?text=FM" alt="Frau Mira Muster" class="w-32 h-32 rounded-full mb-4 object-cover border-4 accent-color-bg shadow-md">
+                    <h3 class="text-xl font-semibold main-color-text">Frau Mira Muster</h3>
+                    <p class="accent-color-text text-sm">Projektkoordination</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Fußzeile -->
+    <footer class="main-color-bg text-white py-8 rounded-t-xl mt-8">
+        <div class="container mx-auto flex flex-col md:flex-row items-center justify-between text-center md:text-left">
+            <div class="mb-4 md:mb-0">
+                <p class="text-lg font-semibold">KITE, THM, Friedberg</p>
+                <p class="text-sm">email@thm.de</p>
+            </div>
+            <div class="flex flex-wrap justify-center md:justify-end space-x-4 text-sm">
+                <a href="#" class="hover:accent-color-text transition duration-300 ease-in-out">Impressum</a>
+                <a href="#" class="hover:accent-color-text transition duration-300 ease-in-out">Datenschutz</a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

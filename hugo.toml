@@ -1,0 +1,25 @@
+[menu]
+  [[menu.main]]
+    name = "Start"
+    pageRef = "_index"
+    weight = 10
+  [[menu.main]]
+    name = "Über uns"
+    pageRef = "ueber-uns"
+    weight = 20
+  [[menu.main]]
+    name = "Team"
+    pageRef = "team"
+    weight = 30
+  [[menu.main]]
+    name = "Projekte"
+    pageRef = "projekte"
+    weight = 40
+  [[menu.main]]
+    name = "News"
+    pageRef = "news"
+    weight = 50
+  [[menu.main]]
+    name = "Publikationen"
+    pageRef = "publikationen"
+    weight = 60
