@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <title>{{ .Title }} | {{ .Site.Title }}</title>
+  {{ partial "head.html" . }} <!-- lädt z. B. Meta, Scripts vom Theme -->
+
+  <style>
+    body { font-family:'Inter',sans-serif; background:#f0f2f5; color:#2c3e50 }
+    nav a { color:#36196d; text-decoration:none; font-weight:500; padding:0.5rem 1rem }
+    nav a:hover { color:#7B52B3 }
+    nav .active, nav .active-link { color:#7B52B3!important; font-weight:700 }
+    .btn-primary{background:#7B52B3;color:#fff;padding:.75rem 1.5rem;border-radius:.375rem;font-weight:600;border:none}
+    .btn-primary:hover{background:#6a449e}
+    .project-label{background:#fff;color:#36196d;padding:.5rem 1rem;border-radius:.375rem;font-weight:600}
+    .section-padding{padding:4rem 1rem}
+    @media(min-width:768px){.section-padding{padding:6rem 4rem}}
+  </style>
+</head>
+<body>
+  {{ block "main" . }}{{ end }}
+</body>
+</html>

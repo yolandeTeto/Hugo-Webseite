@@ -25,6 +25,8 @@
   </url><url>
     <loc>//localhost:1313/categories/</loc>
   </url><url>
+    <loc>//localhost:1313/menu/</loc>
+  </url><url>
     <loc>//localhost:1313/tags/</loc>
   </url><url>
     <loc>//localhost:1313/projekte/projekt1/</loc>

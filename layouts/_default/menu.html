@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>{{ .Title }} - {{ .Site.Title }}</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    body { font-family:'Inter',sans-serif; background:#f0f2f5; color:#2c3e50; }
+
+    /* Einheitliche Hauptfarbe */
+    .main-color-bg   { background:#3f1d77; }
+    .main-color-text { color:#3f1d77; }
+
+    /* Akzentfarbe */
+    .accent-color-text { color:#7B52B3; }
+
+    .section-padding { padding:4rem 1rem; }
+    @media(min-width:768px){ .section-padding{padding:6rem 4rem;} }
+
+    .btn-primary{background:#7B52B3;color:#fff;padding:.75rem 1.5rem;border-radius:.375rem;font-weight:600}
+    .btn-primary:hover{background:#6a449e}
+    .active-link{color:#7B52B3!important;font-weight:700}
+    .project-label{background:#fff;color:#3f1d77;padding:.5rem 1rem;border-radius:.375rem;font-weight:600}
+  </style>
+</head>
+<body class="text-gray-800">
+
+  <!-- Header -->
+  <header class="main-color-bg text-white shadow-lg py-4 rounded-b-xl">
+    <nav class="container mx-auto flex flex-col md:flex-row items-center justify-between px-4">
+      <div class="text-3xl font-extrabold mb-4 md:mb-0">KITE</div>
+      <ul class="flex flex-wrap justify-center md:justify-end space-x-4 md:space-x-8 text-lg">
+        {{ range .Site.Menus.main }}
+          <li>
+            <a href="{{ if .Page }}{{ .Page.RelPermalink }}{{ else }}{{ .URL | relURL }}{{ end }}"
+               class="px-3 py-2 rounded-lg transition duration-300 ease-in-out font-semibold
+               {{ if or (eq .Page.RelPermalink $.RelPermalink) (eq (.URL | relURL) $.RelPermalink) }} active-link {{ else }} text-white/90 hover:text-white hover:bg-white/10 {{ end }}">
+              {{ .Name }}
+            </a>
+          </li>
+        {{ end }}
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hauptbereich -->
+  <main class="section-padding bg-white rounded-xl shadow-lg mx-4 md:mx-auto my-8 max-w-6xl">
+    <div class="container mx-auto px-4 text-center">
+      <h1 class="text-3xl md:text-4xl font-bold main-color-text mb-8 border-b-2 accent-color-text pb-2 inline-block">
+        {{ .Title }}
+      </h1>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-10">
+        {{ range .Site.Menus.main }}
+          <a href="{{ if .Page }}{{ .Page.RelPermalink }}{{ else }}{{ .URL | relURL }}{{ end }}"
+             class="block bg-[#ecf0f1] rounded-xl shadow-md p-6 text-center border border-[#d1c4e9] hover:shadow-lg transition">
+            <div class="project-label mb-3">{{ .Name }}</div>
+          </a>
+        {{ end }}
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="main-color-bg text-white py-8 rounded-t-xl mt-8">
+    <div class="container mx-auto px-4 flex flex-col md:flex-row items-center justify-between text-center md:text-left">
+      <div class="mb-4 md:mb-0">
+        <p class="text-lg font-semibold">KITE, THM, Friedberg</p>
+        <p class="text-sm">email@thm.de</p>
+      </div>
+      <div class="flex flex-wrap justify-center md:justify-end space-x-4 text-sm">
+        <a href="#" class="hover:accent-color-text">Impressum</a>
+        <a href="#" class="hover:accent-color-text">Datenschutz</a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

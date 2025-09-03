@@ -1,0 +1,15 @@
+nav a {
+  color:#36196d;
+  text-decoration:none;
+  font-weight:500;
+  padding:0.5rem 1rem;
+}
+
+nav a:hover {
+  color:#7B52B3;
+}
+
+nav a.active-link {
+  color:#7B52B3 !important;
+  font-weight:700;
+}
