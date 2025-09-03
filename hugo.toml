@@ -1,3 +1,11 @@
+baseURL = "https://yolandeTeto.github.io/Hugo-Webseite/"
+languageCode = "de-de"
+title = "KITE"
+theme = "ananke"
+
+[params]
+  custom_css = ["custom.css"]
+
 [menu]
   [[menu.main]]
     name = "Start"
