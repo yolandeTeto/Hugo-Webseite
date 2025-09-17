@@ -2,33 +2,33 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>//localhost:1313/news/</loc>
+    <loc>http://localhost:1313/Hugo-Webseite/news/</loc>
     <lastmod>2023-10-27T10:00:00+01:00</lastmod>
   </url><url>
-    <loc>//localhost:1313/projekte/wetterdaten/</loc>
+    <loc>http://localhost:1313/Hugo-Webseite/projekte/wetterdaten/</loc>
     <lastmod>2023-10-27T10:00:00+01:00</lastmod>
   </url><url>
-    <loc>//localhost:1313/projekte/</loc>
+    <loc>http://localhost:1313/Hugo-Webseite/projekte/</loc>
     <lastmod>2023-10-27T10:00:00+01:00</lastmod>
   </url><url>
-    <loc>//localhost:1313/publikationen/</loc>
+    <loc>http://localhost:1313/Hugo-Webseite/publikationen/</loc>
     <lastmod>2023-10-27T10:00:00+01:00</lastmod>
   </url><url>
-    <loc>//localhost:1313/</loc>
+    <loc>http://localhost:1313/Hugo-Webseite/</loc>
     <lastmod>2023-10-27T10:00:00+01:00</lastmod>
   </url><url>
-    <loc>//localhost:1313/team/</loc>
+    <loc>http://localhost:1313/Hugo-Webseite/team/</loc>
     <lastmod>2023-10-27T10:00:00+01:00</lastmod>
   </url><url>
-    <loc>//localhost:1313/ueber-uns/</loc>
+    <loc>http://localhost:1313/Hugo-Webseite/ueber-uns/</loc>
     <lastmod>2023-10-27T10:00:00+01:00</lastmod>
   </url><url>
-    <loc>//localhost:1313/categories/</loc>
+    <loc>http://localhost:1313/Hugo-Webseite/categories/</loc>
   </url><url>
-    <loc>//localhost:1313/menu/</loc>
+    <loc>http://localhost:1313/Hugo-Webseite/menu/</loc>
   </url><url>
-    <loc>//localhost:1313/tags/</loc>
+    <loc>http://localhost:1313/Hugo-Webseite/tags/</loc>
   </url><url>
-    <loc>//localhost:1313/projekte/projekt1/</loc>
+    <loc>http://localhost:1313/Hugo-Webseite/projekte/projekt1/</loc>
   </url>
 </urlset>
